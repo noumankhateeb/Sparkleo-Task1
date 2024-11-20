@@ -103,6 +103,29 @@ input::placeholder {
     text-align: left;
 }
 
+.password-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.password-container input {
+    flex: 1;
+    padding-right: 50px;
+    /* Extra space for the toggle icon */
+}
+
+.toggle-password {
+    position: absolute;
+    right: 16px;
+    cursor: pointer;
+    display: flex;
+}
+
+.eye-icon {
+    width: 20px;
+}
+
 .create-account-text {
     text-decoration: none;
     font-size: 14px;

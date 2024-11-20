@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './SignIn.css';
 import BrandOverlay from '../components/BrandOverlay';
 
 const SignIn = () => {
+
+    const [showPassword, setShowPassword] = useState(false);
+
     return (
         <div className="signin-page">
 
@@ -12,7 +15,7 @@ const SignIn = () => {
 
                     <div className='back-to-dashboard'>
                         <button className='back-button'>
-                            <img className='back-icon' src='./back.png' />
+                            <img className='back-icon' alt='back' src='./back.png' />
                             Back
                         </button>
                     </div>
@@ -31,7 +34,15 @@ const SignIn = () => {
                         <input type="email" placeholder="mail@simmmple.com" required />
 
                         <label>Password*</label>
-                        <input type="password" placeholder="Min. 8 characters" required />
+                        <div className="password-container">
+                            <input type={showPassword ? "text" : "password"} placeholder="Min. 8 characters" required />
+                            <span
+                                className="toggle-password"
+                                onClick={() => setShowPassword(!showPassword)}
+                            >
+                                {showPassword ? <img className='eye-icon' alt='hide' src='./hide.png' /> : <img className='eye-icon' alt='show' src='./show.png' />}
+                            </span>
+                        </div>
 
                         <div className="form-options">
                             <label className='checkbox-text'>

@@ -8,7 +8,7 @@ const BrandOverlay = () => {
       <div className='overlay-container'>
 
         <div className="brand">
-          <span className="icon"><img className='logo' src='/logo.png' /></span>
+          <span className="icon"><img className='logo' alt='logo' src='/logo.png' /></span>
           <span className="brand-name">Spark</span>
         </div>
 
